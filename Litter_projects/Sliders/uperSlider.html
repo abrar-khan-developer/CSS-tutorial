@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .quick-example{
+            background-color: black;
+            width: 100%;
+            padding: 1rem;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 500ms;
+
+        }
+        .quick-example > div{
+            overflow: hidden;
+        }
+        .quick-example:hover{
+            grid-template-rows: 1fr;
+        }
+        .example-2{
+             transition: grid-template-rows 1s;
+        }
+    </style>
+    <title> Uper slider </title>
+</head>
+<body>
+    <div class="quick-example">
+        <div>
+            This is content for testing upper slider
+        </div>
+    </div>
+
+     <div class="quick-example example-2">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam commodi voluptatem ipsa non perspiciatis atque, nemo expedita. Laborum expedita eius repudiandae fuga quos, enim mollitia illo aliquam dolorem, harum architecto?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam commodi voluptatem ipsa non perspiciatis atque, nemo expedita. Laborum expedita eius repudiandae fuga quos, enim mollitia illo aliquam dolorem, harum architecto?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam commodi voluptatem ipsa non perspiciatis atque, nemo expedita. Laborum expedita eius repudiandae fuga quos, enim mollitia illo aliquam dolorem, harum architecto?</p>
+        </div>
+    </div>
+</body>
+</html>

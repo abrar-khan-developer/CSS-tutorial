@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.carousel{
+    margin: 100px auto;
+    width: 90%;
+    border: 2px solid red;
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    animation: spin 5s infinite linear;
+}
+.card{
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background-color: cornflowerblue;
+    font-size: 3rem;
+    border-radius: .2rem;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from{
+        translate: 0;
+    }   
+    to{
+        translate: -100%;
+    }
+}
