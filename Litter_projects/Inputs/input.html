@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .input-group{
+            width: min-content;
+            position: relative;
+        }
+        .input-group label{
+            font-size: 12px;
+            position: absolute;
+            left: 45px;
+            top: 20%;
+            padding: 0 5px;
+        }
+        .input-group input{
+            outline: none;
+        }
+        .input-group input:focus ~ label{
+            font-size: 7px;
+            transform: translateY(-7.5px);
+            left: 5px;
+            background-color: white;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="input-group">
+        <input type="text" required>
+        <label for=""> UserName </label>
+    </div>
+    
+</body>
+</html>
