@@ -39,7 +39,6 @@ body{
 /* box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff; */
 }
 .shadow{
-    /* margin-top: 100px; */
     margin-right: 100px;
     margin-inline: auto;
     background-color: white ;
@@ -48,4 +47,55 @@ body{
 }
 .shadow:hover{
     box-shadow: 2px 2px 2px rgba(0,0,0,0.1) , -1px -1px 1px white ; 
+}
+
+
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container button{
+    font-size: 20px;
+    font-family: inherit;
+    color: white;
+    background-color: #800579;
+    padding: 0.2em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.btn-container .send-icon{
+    display: block;
+    font-size: 10px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+.btn-container span{
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+.btn-container button:hover .send-icon{
+     transform: translateX(1.3em)/* rotate(45deg)*/ scale(1.1); 
+}
+.btn-container button:hover .icon-wrapper{
+    animation: move-1 0.7s ease-in-out infinite alternate;
+} 
+.btn-container button:hover span{
+    transform: translateX(5em);
+}
+.btn-container button:active{
+    scale: 0.96;
+}
+@keyframes move-1 {
+    from{
+        transform: translateY(0.1em);
+    }to{
+        transform: translateY(-0.1em);
+    }
 }
