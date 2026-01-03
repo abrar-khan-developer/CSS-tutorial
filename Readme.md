@@ -16,4 +16,4 @@ In this repository, I’m learning and practicing the basic of , including:
 - Adding transitions and animations for smooth effects
 - Making web pages responsive using media queries
 
-## 📁 Folder Structure
+<!-- ## 📁 Folder Structure -->
