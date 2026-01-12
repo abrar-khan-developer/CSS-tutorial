@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container .text{
+            position: relative;
+            color: blue;
+            font-size: 30px;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        .contaner .text.first-text{
+            color: white;
+        }
+        .text.sec-text::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border-left: 2px solid blue;
+            animation: animate 4s steps(12) infinite;
+        }
+        @keyframes animate {
+            40%, 60%{
+                left: 100%;
+            }
+            100%{
+                left: 0%;
+            }
+        }
+    </style>
+    <title>Typing text html</title>
+</head>
+<body>
+    <div class="container">
+        <span class="text first-text"> I'm a</span>
+        <span class="text sec-text"> Abrar khan </span>
+    </div>
+    
+</body>
+<script>
+    const text =  document.querySelector(".sec-text");
+    const textLoad = () => {
+        setTimeout( () => {
+            text.textContent = "Abrar khan"
+        },0)
+        setTimeout( () => {
+            text.textContent = "Frontend Developer"
+        },4000)
+         setTimeout( () => {
+            text.textContent = "Rectjs Developer"
+        },8000)
+    }
+    textLoad()
+    setInterval(textLoad,12000)
+</script>
+</html>

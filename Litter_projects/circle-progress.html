@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 420px;
+            padding: 50px 0;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .circular-progress{
+            position: relative;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background: conic-gradient(#7d2ae8 3.6deg , #ededed 0deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circular-progress::before{
+            content: '';
+            position: absolute;
+            height: 210px;
+            width: 210px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .progress-value{
+            position: relative;
+            font-size: 50px;
+            font-weight: 600;
+            color: #7d2ae8;
+        }
+    </style>
+    <title>Cirecle progress html</title>
+</head>
+<body>
+    <div class="container">
+        <div class="circular-progress">
+            <span class="progress-value">0%</span>
+        </div>
+
+        <span class="text">HTML & CSS</span>
+    </div>
+    
+</body>
+<script>
+    let circle_progress =  document.querySelector('.circular-progress')
+    let progress_value =  document.querySelector('.progress-value')
+
+    let progressStartValue = 0;
+    let progressEndValue = 90
+    let speed = 100
+
+    let progress = setInterval( () => {
+        progressStartValue++
+
+        progress_value.textContent = `${progressStartValue}%`
+        circle_progress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg , #ededed 0deg)`
+        if(progressStartValue == progressEndValue){
+            clearInterval(progress)
+        }
+        // console.log(progressStartValue)
+    },speed)
+</script>
+</html>
