@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* border: 2px solid; */
+            background-color: #eed891;
+        }
+        .wrapper{
+            position: relative;
+            height: 330px;
+            width: 620px;
+            background-color: #D48600;
+            /* background-color: wheat; */
+            border-top: 2px solid #cc6600;
+            border-left: 2px solid #cc6600;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            perspective: 1000px;
+        }
+        .flip-card{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s ease-in-out;
+       
+        }
+        .wrapper:hover .flip-card{
+            transform: rotateY( 180deg);
+        }
+        .flip-card .card{
+            height: 100%;
+            width: 100%;
+            background-color: #D48600;
+            border-top: 2px solid #cc6600;
+            border-left: 2px solid #cc6600;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            position: absolute;
+        }
+        .back.card{
+            transform: rotateY(180deg);
+        }
+        .back.card .home-logo{
+            height: 65px;
+            width: 65px;
+            position: relative;
+            border: 10px solid #4d2600;
+            border-radius: 50%;
+            margin-right: 16px; 
+        }
+        .home-logo .icon{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%) translateY(6px);
+            display: inline-block;
+            height: 15px;
+            width: 25px;
+            background-color: #4d2600;
+        }
+         .home-logo .icon::before{
+            content: '';
+            position: absolute;
+            top: -15px;
+            height: 25px;
+            width: 25px;
+            background-color: #4d2600;
+            transform: rotate(45deg);
+         }
+         .back.card .num{
+            font-size: 25px;
+            font-weight: 600;
+            color: #4d2600;
+         }
+        span.circle,
+        span.square{
+            height: 90px;
+            width: 90px;
+            border: 10px solid #4d2600;
+        }
+        span.circle{
+            border-radius: 50%;
+        }
+        span.triangle{
+            position: relative;
+            margin-inline: 30px;
+            height: 0;
+            width: 0;
+            border-right:60px solid transparent ;
+            border-left:60px solid transparent ;
+            border-bottom:110px solid #4d2600 ;
+        }
+        span.triangle::before{
+            content: '';
+            position: absolute;
+            height: 0;
+            width: 0;
+            left: -40px;
+            top: 20px;
+            border-right:40px solid transparent ;
+            border-left:40px solid transparent ;
+            border-bottom:80px solid #D48600 ;
+        }
+    </style>
+    <title> 3D ANIMATION </title>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="flip-card">
+            <div class="front card">
+                <span class="circle"></span>
+                <span class="triangle"></span>
+                <span class="square"></span>
+            </div>
+
+            <div class="back card">
+                <span class="home-logo">
+                    <span class="icon"></span>
+                </span>
+                <span class="num">8650 4006</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
